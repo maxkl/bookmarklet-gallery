@@ -12,7 +12,7 @@ module.exports = function (app) {
 				return;
 			}
 
-			res.send('name:', result.rows[0].name);
+			res.send('name:' + result.rows[0].name);
 		});
 	});
 
