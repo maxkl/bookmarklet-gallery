@@ -6,7 +6,7 @@ module.exports = function (app) {
 	const router = new express.Router();
 
 	router.get('/', function (req, res, next) {
-		db.query('SELECT id, title, description, source FROM bookmarklets WHERE id = $1', [ req.query.id ], function (err, result) {
+		db.query('SELECT id, title, description, source FROM "bookmarklets-gallery".bookmarklets WHERE id = $1', [ req.query.id ], function (err, result) {
 			if(err) {
 				next(err);
 				return;
